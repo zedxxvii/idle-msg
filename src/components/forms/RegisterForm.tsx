@@ -26,17 +26,33 @@ export default function RegisterForm() {
             confirmPassword: "",
         },
     })
-    function onRegister(values: z.infer<typeof RegisterFormSchema>) {
+    async function onRegister(values: z.infer<typeof RegisterFormSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values)
-        setUser({
-            id: 284213,
-            username: values.username,
-            account: `${values.password}@register.com`,
-            server: "Asia",
-            daimond: 1000,
-        })
+        try {
+            // request register here
+            // const response = await fetch('/example/register', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({
+            //         username: values.username,
+            //         password: values.password,
+            //         password2: values.confirmPassword,
+            //     }),
+            // })
+            // Set user by using the server response, this is just an example 
+            setUser({
+                id: 284213,
+                username: values.username,
+                account: `${values.password}@register.com`,
+                server: "Asia",
+                daimond: 1000,
+            })
+        } catch (error) {
+            // handle error here
+        }
+        
         router.push('/home');
     }
     return (

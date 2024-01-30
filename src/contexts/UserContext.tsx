@@ -7,16 +7,8 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 
-const initUser: User = {
-    id: 0, 
-    username: "",
-    account: "",
-    server: "",
-    daimond: 0,
-}
-
 const useUserState = () =>
-    useState<User>();
+    useState<User | null>(null);
 
 export const UserContext = createContext<ReturnType<
     typeof useUserState

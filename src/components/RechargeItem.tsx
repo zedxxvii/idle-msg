@@ -14,7 +14,7 @@ export default function RechargeItem({ amount, price, id }: { amount: number, pr
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <div className="rounded-lg flex flex-col items-center p-10">
+                <div className="rounded-lg flex flex-col items-center p-10 w-48 h-72">
                     <div className="flex flex-col items-center border-2 rounded-lg border-lime-600">
                         <img src="/pngs/diamond.png" alt="" />
                         <div className="font-semibold m-2">

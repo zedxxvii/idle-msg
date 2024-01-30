@@ -15,6 +15,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get token and then validate it if token exists and valid pass return value into the user context
+
   return (
     <html lang="en">
       <body className='bg-[#8AAAE5]'>

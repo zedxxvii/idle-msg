@@ -1,6 +1,4 @@
 'use client'
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { useUser } from "@/contexts/UserContext";
 import { Separator } from "@/components/ui/separator";
 import RechargeItem from "@/components/RechargeItem";
@@ -50,7 +48,7 @@ export default function Page() {
             </div>
             <Separator className="my-10" />
             <div className="font-bold"><p>Select Item</p></div>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 divide-x-2 divide-y-2 my-10">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 my-10">
                 {itemArray.map((item, index) => {
                     return (
                         <RechargeItem key={index} amount={item.amount} price={item.price} id={item.id}/>
