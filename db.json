@@ -1,0 +1,30 @@
+
+{"updates":
+
+[
+    {
+      "version": "Version 1.0",
+      "hotfixes": [
+        "Hotfix 1",
+        "Hotfix 2",
+        "Hotfix 3"
+      ]
+    },
+    {
+      "version": "Version 2.0",
+      "hotfixes": [
+        "Hotfix 4",
+        "Hotfix 5"
+      ]
+    },
+    {
+      "version": "Version 3.0",
+      "hotfixes": [
+        "Hotfix 6",
+        "Hotfix 7",
+        "Hotfix 8",
+        "Hotfix 9"
+      ]
+    }
+  ]
+}
