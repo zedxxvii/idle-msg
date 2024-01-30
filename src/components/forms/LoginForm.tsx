@@ -14,7 +14,7 @@ import { useUser } from "@/contexts/UserContext";
 import { LoginFormSchema } from "@/types/types";
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
-
+import { useState } from 'react'
 
 export default function LoginForm() {
     const [user,setUser] = useUser();
@@ -33,16 +33,24 @@ export default function LoginForm() {
         // Do something with the form values. example, making api request.
         // ✅ This will be type-safe and validated.
         console.log(values)
+        const token = ""
+        if (token) {
+            // Set token in localStorage
+            localStorage.setItem('token', token);
+            setUser({
+                id: 284213,
+                username: values.username,
+                account: `${values.password}@login.com`,
+                server: "Asia",
+                daimond: 1000,
+            })
+            
 
-        // Set user state
-        setUser({
-            id: 284213,
-            username: values.username,
-            account: `${values.password}@login.com`,
-            server: "Asia",
-            daimond: 1000,
-        })
-        router.push('/home');
+          } else {
+            // Handle sign-in failure
+            console.error('Sign-in failed');
+          }    
+          router.push('/home');
     }
     return (
         <Form {...form}>
