@@ -75,7 +75,22 @@
   }
 }
 .cool-background {
-  background-image: linear-gradient(to right, #990011, #fcf6f5);
+  background-image: linear-gradient(to right, #f8f094, #fcf6f5);
   margin: 15px;
   /* Add more background styles here */
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-left {
+  
+  animation: slideInFromLeft 0.5s ease-out;
 }
