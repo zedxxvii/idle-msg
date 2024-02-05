@@ -14,6 +14,7 @@ import { useUser } from "@/contexts/UserContext";
 import { LoginFormSchema } from "@/types/types";
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { URL } from "@/constant/url";
 
 export default function LoginForm() {
     const [user, setUser] = useUser();
@@ -33,25 +34,26 @@ export default function LoginForm() {
         // ✅ This will be type-safe and validated.
         console.log(values)
         try {
-            // request login here
-            // const response = await fetch('/example/login', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({
-            //         username: values.username,
-            //         password: values.password,
-            //     }),
-            // })
-            // Set user by using the server response, this is just an example 
+            const response = await fetch(`${URL}/auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: values.username,
+                    password: values.password,
+                }),
+             
+            })
+            const data = await response.json()
+            console.log(data)
             setUser({
-                id: 284213,
-                username: values.username,
-                account: `${values.password}@login.com`,
-                server: "Asia",
-                daimond: 1000,
+                id: data.id,
+                username: data.username,
+                // account: `${values.password}@login.com`,
+                // server: "Asia",
+                // daimond: 1000,
             })
         } catch (error) {
-            // handle error here
+            console.log(error)
         }
         
 

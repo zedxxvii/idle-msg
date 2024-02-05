@@ -3,9 +3,9 @@ import { z } from "zod";
 export interface User {
     id: Number;
     username: String;
-    server: String;
-    account: String;
-    daimond: Number;
+    // server: String;
+    // account: String;
+    // daimond: Number;
 }
 
 export const LoginFormSchema = z.object({

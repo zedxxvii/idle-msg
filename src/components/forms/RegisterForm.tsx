@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useUser } from "@/contexts/UserContext";
 import { RegisterFormSchema } from "@/types/types";
+import { URL } from "@/constant/url";
 
 export default function RegisterForm() {
     const [user, setUser] = useUser();
@@ -31,23 +32,25 @@ export default function RegisterForm() {
         // ✅ This will be type-safe and validated.
         console.log(values)
         try {
-            // request register here
-            // const response = await fetch('/example/register', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify({
-            //         username: values.username,
-            //         password: values.password,
-            //         password2: values.confirmPassword,
-            //     }),
-            // })
+            //request register here
+            const response = await fetch(`${URL}/auth/register`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: values.username,
+                    password: values.password,
+                    confirmPassword: values.confirmPassword,
+                }),
+            })
+            const data  = await response.json()
+            console.log(data)
             // Set user by using the server response, this is just an example 
             setUser({
-                id: 284213,
-                username: values.username,
-                account: `${values.password}@register.com`,
-                server: "Asia",
-                daimond: 1000,
+                id: data.id,
+                username: data.username,
+                // account: `${values.password}@register.com`,
+                // server: "Asia",
+                // daimond: 1000,
             })
         } catch (error) {
             // handle error here
