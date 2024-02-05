@@ -2,40 +2,31 @@
 import { useUser } from "@/contexts/UserContext";
 import { Separator } from "@/components/ui/separator";
 import RechargeItem from "@/components/RechargeItem";
+import { useEffect } from "react";
+import { useState } from "react";
+import { url } from "@/constant/url";
+type Item = {
+    amount: number;
+    price: number;
+    id: number;
+}
 
 export default function Page() {
     const [user, setUser] = useUser();
-    const itemArray = [{
-        id: 1,
-        amount: 66,
-        price: 0.99,
-    },
-    {
-        id: 2,
-        amount: 330,
-        price: 4.99,
-    },
-    {
-        id: 3,
-        amount: 660,
-        price: 9.99,
-    },
-    {
-        id: 4,
-        amount: 1320,
-        price: 19.99,
-    },
-    {
-        id: 5,
-        amount: 3300,
-        price: 49.99,
-    },
-    {
-        id: 6,
-        amount: 6600,
-        price: 99.99,
-    },
-    ]
+    const [data, setData] = useState<Item[]>([]); 
+    useEffect(() => {
+        // fetch(`${url}/item`)
+        fetch("http://206.238.113.198:3000/item")
+        
+          .then(response => response.json())
+          .then((data:Item[]) => {
+            setData(data);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }, []);
+    
     return (
         <div className="justify-center items-center flex flex-col bg-slate-50 my-10 rounded-lg w-full lg:w-1/2 lg:mx-auto ">
             <div className="mt-10 font-bold"><p>Top Up Account Detail</p></div>
@@ -49,7 +40,7 @@ export default function Page() {
             <Separator className="my-10" />
             <div className="font-bold"><p>Select Item</p></div>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 my-10">
-                {itemArray.map((item, index) => {
+                {data.map((item, index) => {
                     return (
                         <RechargeItem key={index} amount={item.amount} price={item.price} id={item.id}/>
                     )
