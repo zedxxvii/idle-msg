@@ -21,7 +21,7 @@ import Link from "next/link";
      <div className="flex flex-col">
        {/* Updates contents */}
        {data.map((update:any, index:number) => (
-         <div key={index} className="p-10 bg-[#ffffff] text-black h-25 flex flex-col justify-evenly m-5 rounded-lg">
+         <div key={index} className="p-10 opacity-80 bg-[#ffffff] text-black h-25 flex flex-col justify-evenly m-5 rounded-lg">
            <h1 className="font-bold align-text-bottom">{update.version}</h1>
            <div>
              <br />

@@ -9,8 +9,6 @@ import {
 import { useEffect } from "react";
 export default function Page() {
   useEffect(() => {
-    let scrollTimeout: NodeJS.Timeout;
-
     const options = {
       root: null,
       rootMargin: '0px',
@@ -84,11 +82,12 @@ export default function Page() {
         <button className=" transform transition-transform hover:scale-110 w-20 h-30">
           <img src="Images/pikachu.png" alt="Button Image" />
         </button>
+        
       </div>
 
       <div className="bg-white bg-opacity-30 shadow-lg rounded-lg p-6">
   <h2 className="text-xl font-bold mb-4 text-yellow-200 font-mono">Unleash Your Monsters!</h2>
-  <p className="text-gray-700 font-large font-serif"> 
+  <p className="font-zorque text-gray-700 font-large text-lg"> 
   <br/> 
   Embark on an epic journey in Idle Monster Saga, where you command a legion of powerful monsters on a quest to save the realm from darkness. With strategic gameplay and captivating visuals, immerse yourself in a world brimming with mythical creatures, ancient ruins, and formidable foes. Train your monsters, uncover legendary artifacts, and unleash devastating abilities as you rise to become the ultimate champion. Will you answer the call of destiny and lead your monsters to victory?
  <br/>

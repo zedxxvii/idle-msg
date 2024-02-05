@@ -19,6 +19,7 @@ const config = {
     },
     fontFamily: {
       'zorque': ['Zorque', 'fallbackFont'],
+      'sans': ['Roboto', 'sans-serif'],
     },
     extend: {
       screens: {

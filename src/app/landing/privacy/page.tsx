@@ -2,7 +2,7 @@
 export default function Page() {
   return (
     <>
-      <div className="bg-white bg-opacity-50 shadow-lg rounded-lg p-6">
+      <div className=" bg-white bg-opacity-50 shadow-lg rounded-lg p-6">
         <h2 className="text-xl font-bold mb-4">Privacy Policy</h2>
         <p className="text-gray-700 mb-4">
           At Idle Monster Saga, we are committed to protecting your privacy.

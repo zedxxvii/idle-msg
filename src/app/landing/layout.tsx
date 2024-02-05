@@ -1,14 +1,19 @@
 import { Menubar, MenubarContent, MenubarMenu, MenubarRadioGroup, MenubarRadioItem, MenubarTrigger } from "@/components/ui/menubar"
 import LandingNavBar from "@/components/LandingNavBar";
 import Link from "next/link";
+import { Inter, Poppins } from 'next/font/google'
 
 export default function LandingLayout({
+    
     children, // will be a page or nested layout
+    
 }: {
     children: React.ReactNode
+    
 }) {
     return (
-        <div className="flex flex-col h-screen bg-[url('/images/bg_poke.webp')] bg-cover bg-no-repeat overflow-hidden overflow-y-auto">
+      
+        <div className="{`${inter.variable} ${poppins.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`} flex flex-col h-screen bg-[url('/images/bg_poke.webp')] bg-cover bg-no-repeat overflow-hidden overflow-y-auto">
             <LandingNavBar />
             {children}
             <div className="flex-grow">
@@ -28,6 +33,7 @@ export default function LandingLayout({
                 </Menubar>
             </div>
         </div>
+       
     )
 }
 
