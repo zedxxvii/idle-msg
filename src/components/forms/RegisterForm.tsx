@@ -52,11 +52,12 @@ export default function RegisterForm() {
                 // server: "Asia",
                 // daimond: 1000,
             })
+            router.push('/home');
         } catch (error) {
             // handle error here
         }
         
-        router.push('/home');
+        
     }
     return (
         <Form {...form}>
