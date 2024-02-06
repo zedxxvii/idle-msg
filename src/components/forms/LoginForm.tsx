@@ -109,7 +109,13 @@ export default function LoginForm() {
           )}
         />
         <p className="text-sm">Forgot Password</p>
+        
         <Button type="submit">Login</Button>
+        <div className= "space-y-4">
+            <a href="/landing">
+        <Button type="button">Go Back</Button>
+        </a>
+        </div>
       </form>
     </Form>
   );

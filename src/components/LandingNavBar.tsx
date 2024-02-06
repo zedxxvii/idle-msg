@@ -29,7 +29,7 @@ export default function LandingNavBar() {
                     </MenubarTrigger>
                 </MenubarMenu> */}
                 <MenubarMenu>
-                    <Link href="/authentication">
+                    <Link href="/home">
                         <MenubarTrigger className="px-4 py-2 text-lg font-bold text-custom-green transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:text-hover-green">
                             Top Up
                         </MenubarTrigger>
