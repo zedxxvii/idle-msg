@@ -21,6 +21,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/contexts/UserContext";
 import { User } from "@/types/types";
+import loading from "./loading";
 
 export default function HomeLayout({
   children, // will be a page or nested layout
@@ -79,11 +80,13 @@ export default function HomeLayout({
       <NavigationMenu className="flex justify-between h-16 w-full px-2 bg-[#ffffff]">
         <NavigationMenuList className="w-full">
           <NavigationMenuItem>
-            <Link href="/home" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Top Up
-              </NavigationMenuLink>
-            </Link>
+          {!loading && user && (
+        <Link href="/home" passHref>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Top Up
+          </NavigationMenuLink>
+        </Link>
+      )}
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/home/history" legacyBehavior passHref>

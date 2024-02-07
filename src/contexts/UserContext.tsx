@@ -2,10 +2,6 @@
 
 import { useState, createContext, useContext } from "react"
 import { LoginFormSchema, RegisterFormSchema, type User } from '@/types/types'
-import { useRouter } from 'next/navigation'
-import * as z from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
 
 const useUserState = () =>
     useState<User | null>(null);

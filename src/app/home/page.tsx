@@ -27,6 +27,7 @@ export default function Page() {
       });
   }, []);
   return (
+    <>
     <div className="justify-center items-center flex flex-col bg-slate-50 my-10 rounded-lg w-full lg:w-1/2 lg:mx-auto ">
       <div className="mt-10 font-bold">
         <p>Top Up Account Detail</p>
@@ -55,11 +56,10 @@ export default function Page() {
               key={index}
               amount={item.amount}
               price={item.price}
-              id={item.id}
-            />
+              id={item.id} />
           );
         })}
       </div>
-    </div>
+    </div></>
   );
 }
