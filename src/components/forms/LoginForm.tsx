@@ -16,6 +16,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { URL } from "@/constant/url";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function LoginForm() {
   const [user, setUser] = useUser();
@@ -108,8 +109,9 @@ export default function LoginForm() {
             </FormItem>
           )}
         />
-        <p className="text-sm">Forgot Password</p>
-        
+<Link href="#">
+  <p className="text-sm hover:text-red-500 hover:font-bold hover:underline">Forgot Password?</p>
+</Link>        
         <Button type="submit">Login</Button>
         <div className= "space-y-4">
             <a href="/landing">

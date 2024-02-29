@@ -20,7 +20,6 @@ import {
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@/contexts/UserContext";
-import { User } from "@/types/types";
 import loading from "./loading";
 
 export default function HomeLayout({
