@@ -25,6 +25,10 @@ const config = {
       screens: {
         '780px': '780px',
       },
+      backgroundImage:{
+        'login': "url('/Images/bg.png')",
+        'home' :"url('/Images/bg_poke.webp')"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -13,7 +13,7 @@ export default function LandingLayout({
 }) {
     return (
       
-        <div className="{`${inter.variable} ${poppins.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`} flex flex-col h-screen bg-[url('/images/bg_poke.webp')] bg-cover bg-no-repeat overflow-hidden overflow-y-auto">
+        <div className="{`${inter.variable} ${poppins.variable} font-inter antialiased bg-white text-slate-800 tracking-tight`} flex flex-col h-screen bg-home bg-cover bg-no-repeat overflow-hidden overflow-y-auto">
             <LandingNavBar />
             {children}
             <div className="flex-grow">
