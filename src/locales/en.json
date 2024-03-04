@@ -9,7 +9,7 @@
   },
   "BaseTemplate": {
     "description": "Good Game You can play",
-    "made_with": "Created By"
+    "made_with": "Made with"
   },
   "Index": {
     "meta_title": "Next.js Boilerplate Presentation",
