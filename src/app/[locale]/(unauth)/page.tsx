@@ -1,9 +1,49 @@
 import Image from 'next/image';
 
+import { Carousel,
+CarouselContent,
+CarouselItem,
+CarouselNext,
+CarouselPrevious } from '@/components/carousel';
 export default function Index() {
+  
   return (
     <>
       <section>
+         <Carousel>
+        <CarouselContent className="">
+          <CarouselItem className="flex justify-center items-center w-4/9 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 ">
+            <Image src="/assets/carousels/1.webp" alt="bg" width={460}
+          height={160} />
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center w-4/9 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <Image src="/assets/carousels/2.webp" alt="bg"width={460}
+          height={160} />
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center w-4/9 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <Image src="/assets/carousels/3.webp" alt="bg"width={460}
+          height={160} />
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center w-4/9 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <Image src="/assets/carousels/4.webp" alt="bg" width={460}
+          height={160}/>
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center w-4/9 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
+            <Image src="/assets/carousels/5.webp" alt="bg" width={460}
+          height={160}/>
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center">
+            <Image src="/assets/carousels/6.webp" alt="bg"width={460}
+          height={160} />
+          </CarouselItem>
+          <CarouselItem className="flex justify-center items-center">
+            <Image src="/assets/carousels/7.webp" alt="bg" width={460}
+          height={160}/>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
         <div className="mx-auto max-w-screen-xl lg:flex lg:items-center">
           <div className="mx-auto max-w-xl text-center">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
@@ -27,7 +67,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="relative mt-8 overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+      <section className="relative mt-8 overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:scale-75">
         <Image
           src="/assets/images/anime.gif"
           alt="bg"
@@ -45,7 +85,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="relative mt-8  overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+      <section className="relative mt-8  overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:scale-75">
         <Image
           src="/assets/images/char up.gif"
           alt="bg"
@@ -62,8 +102,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="relative mt-8  overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-        <Image
+      <section className="relative mt-8  overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:scale-75">
+        <img
           src="/assets/images/char.png"
           alt="bg"
           className="size-full rounded-t-lg object-cover shadow-lg"
@@ -80,8 +120,8 @@ export default function Index() {
           </div>
         </div>
       </section>
-      <section className="relative  mt-8 overflow-hidden rounded-lg shadow transition hover:shadow-lg">
-        <Image
+      <section className="relative  mt-8 overflow-hidden rounded-lg shadow transition hover:shadow-lg hover:scale-75">
+        <img
           src="/assets/images/teamcomp.jpg"
           alt="bg"
           className="size-full rounded-t-lg object-cover shadow-lg"

@@ -43,16 +43,21 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <title>Idle Monster Saga</title>
-      <body className="bg-home bg-cover bg-center bg-no-repeat">
-        <NextIntlClientProvider
-          locale={props.params.locale}
-          messages={messages}
-        >
+    {/* <title>Idle Monster Saga</title> */}
+    <body
+      className="bg-home bg-covercenter bg-no-repeat "
+    >
+      <NextIntlClientProvider locale={props.params.locale} messages={messages}>
+        <div className="text-white text-center">
+          {/* <h1 className="text-5xl font-bold mb-4">Idle Monster Saga</h1> */}
+          {/* <p className="text-2xl mb-8">
+            Welcome to the world of Idle Monster Saga!
+          </p> */}
           {props.children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        </div>
+      </NextIntlClientProvider>
+    </body>
+  </html>
   );
 }
 

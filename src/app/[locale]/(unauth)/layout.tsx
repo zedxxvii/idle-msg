@@ -40,7 +40,7 @@ export default function Layout(props: { children: React.ReactNode }) {
               href="/about/"
               className="border-none font-bold text-gray-700 hover:text-gray-900"
             >
-              {t('about_link')}
+              {t('privacy_link')}
             </Link>
           </li>
         </>
