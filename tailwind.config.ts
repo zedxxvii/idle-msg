@@ -40,6 +40,10 @@ export default {
           900: '#2a4365',
         },
       },
+      backgroundImage: {
+        home: "url('/assets/images/bg_poke.webp')",
+        gifone: "url('/assets/images/anime.gif')",
+      },
     },
   },
   plugins: [],

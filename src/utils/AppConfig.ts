@@ -5,7 +5,7 @@ const localePrefix: LocalePrefix = 'as-needed';
 // FIXME: Update this configuration file based on your project information
 export const AppConfig = {
   name: 'Idle Monster Saga',
-  locales: ['en', 'fr'],
+  locales: ['en', 'kh'],
   defaultLocale: 'en',
   localePrefix,
 };

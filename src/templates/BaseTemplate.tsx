@@ -13,14 +13,14 @@ const BaseTemplate = (props: {
     <div className="w-full px-1 text-gray-700 antialiased">
       <div className="mx-auto max-w-screen-md">
         <header className="border-b border-gray-300">
-          <div className="pb-8 pt-16">
-            <h1 className="text-3xl font-bold text-gray-900">
+          <div className="my-8 rounded-lg bg-[#33d3d358] p-8">
+            <h1 className="text-3xl font-bold text-[#1a4324]">
               {AppConfig.name}
             </h1>
-            <h2 className="text-xl">{t('description')}</h2>
+            <h2 className="text-xl text-[#d4e157]">{t('description')}</h2>
           </div>
 
-          <div className="flex justify-between">
+          <div className="mb-8 mt-16 flex justify-between rounded-lg bg-[#33d3d358] p-8">
             <nav>
               <ul className="flex flex-wrap gap-x-5 text-xl">
                 {props.leftNav}
@@ -35,9 +35,11 @@ const BaseTemplate = (props: {
           </div>
         </header>
 
-        <main>{props.children}</main>
+        <main className="mb-8 mt-16 rounded-lg bg-[#33d3d358] p-8">
+          {props.children}
+        </main>
 
-        <footer className="border-t border-gray-300 py-8 text-center text-sm">
+        <footer className="border-t border-gray-300 py-8 text-center text-sm ">
           © Copyright {new Date().getFullYear()} {AppConfig.name}.
           {` ${t('made_with')} `}
           <a

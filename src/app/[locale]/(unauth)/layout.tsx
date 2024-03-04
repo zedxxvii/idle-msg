@@ -14,15 +14,31 @@ export default function Layout(props: { children: React.ReactNode }) {
           <li>
             <Link
               href="/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
             >
               {t('home_link')}
             </Link>
           </li>
           <li>
             <Link
+              href="/update/"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
+            >
+              {t('updates_link')}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/download/"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
+            >
+              {t('download_link')}
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/about/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
             >
               {t('about_link')}
             </Link>
@@ -31,10 +47,10 @@ export default function Layout(props: { children: React.ReactNode }) {
       }
       rightNav={
         <>
-          <li>
+          {/* <li>
             <Link
               href="/sign-in/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
             >
               {t('sign_in_link')}
             </Link>
@@ -43,11 +59,11 @@ export default function Layout(props: { children: React.ReactNode }) {
           <li>
             <Link
               href="/sign-up/"
-              className="border-none text-gray-700 hover:text-gray-900"
+              className="border-none font-bold text-gray-700 hover:text-gray-900"
             >
               {t('sign_up_link')}
             </Link>
-          </li>
+          </li> */}
 
           <li>
             <LocaleSwitcher />

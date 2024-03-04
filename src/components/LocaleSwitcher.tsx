@@ -20,11 +20,12 @@ export default function LocaleSwitcher() {
     <select
       defaultValue={locale}
       onChange={handleChange}
-      className="border border-gray-300 font-medium focus:outline-none focus-visible:ring"
+      className="rounded-lg border-gray-300 px-4 py-2 text-lg font-bold  text-gray-700 sm:text-sm"
     >
       {AppConfig.locales.map((elt) => (
         <option key={elt} value={elt}>
-          {elt.toUpperCase()}
+          {/* {elt.toUpperCase()} */}
+          {elt === 'en' ? 'English' : 'ខ្មែរ'}
         </option>
       ))}
     </select>

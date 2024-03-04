@@ -1,0 +1,14 @@
+{
+  "RootLayout": {
+    "home_link": "ផ្ទះ",
+    "about_link": "អំពីពួកយើង",
+    "updates_link": "កំណែរទំរង់",
+    "download_link": "ទាញយក",
+    "sign_in_link": "Sign in",
+    "sign_up_link": "Sign up"
+  },
+  "BaseTemplate": {
+    "description": "Good Game You can play",
+    "made_with": "Made with"
+  }
+}

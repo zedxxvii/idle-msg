@@ -43,7 +43,8 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <body>
+      <title>Idle Monster Saga</title>
+      <body className="bg-home bg-cover bg-center bg-no-repeat">
         <NextIntlClientProvider
           locale={props.params.locale}
           messages={messages}
